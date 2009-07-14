@@ -1,0 +1,14 @@
+This software is Licensed under the GPL v3. Please see COPYING for license information.
+Copyright 2009, Colin Miller
+
+v 0.1
+
+Requires ImageMagick and perl. The script uses the montage command from ImageMagick to piece together multiple files downloaded from the photopass website. Currently the preview image for the photopass site limits the output to 450px, but you can crop it to see a smaller section that will display in 450px (in a single dimension). This script just downloads 4 pieces and puts them all together
+
+Usage: ./getpicture.pl <url> ...
+
+url - URL of the photopass preview image. Currently you can find what the URL is by logging in to disneyphotopass.com, opening up one of your images for editing, and using firebug in firefox to inspect the element that the preview image apperas on. There will be a background-image associated with the CSS of the element you land on. You'll have to right click on that url and copy it as an argument to the getpicture.pl program.
+
+You can put multiple URLs to download multiple files. They will be named picture0.jpg, picture1.jpg... etc.
+
+Currently there's no automation for loggin in and ripping all pictures on there, but maybe in the future (unless Disney changes their code).
